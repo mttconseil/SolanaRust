@@ -1,9 +1,15 @@
 fn vec_loop(input: &[i32]) -> Vec<i32> {
     let mut output = Vec::new();
 
-    for element in input {
+    /*for element in input {
         // TODO: Multiply each element in the `input` slice by 2 and push it to
         // the `output` vector.
+        *element *=2
+    }*/
+
+    for element in input {
+        output.push(2 * element);
+        //output.push(*element); deference avec etoile *
     }
 
     output
@@ -24,7 +30,7 @@ fn vec_map(input: &[i32]) -> Vec<i32> {
     input
         .iter()
         .map(|element| {
-            // ???
+            element * 2
         })
         .collect()
 }

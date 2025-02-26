@@ -12,6 +12,7 @@ fn array_and_vec() -> ([i32; 4], Vec<i32>) {
     }
 
     //let v = a.to_vec();
+    //let v = Vec::from(&array[..]);
 
     (a, v)
 }
