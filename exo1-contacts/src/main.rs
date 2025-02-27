@@ -26,6 +26,11 @@ fn ajouter_contact(contacts: &mut Vec<Contact>){
 }
 
 // méthode afficher_contacts
+fn afficher_contacts(contacts: &Vec<Contact>){
+    for c in contacts {
+        println!("Nom: {} Telephone: {}", c.nom, c.telephone);
+    }
+}   
 
 fn main() {
     let mut contacts: Vec<Contact> = Vec::new();
@@ -43,6 +48,7 @@ fn main() {
         // matching selon le choix, d'appeler la bonne méthode.
         match choix {
             "1" => ajouter_contact(&mut contacts),
+            "2" => afficher_contacts(&contacts),
             _ => {
                 println!("Echec")
             }
